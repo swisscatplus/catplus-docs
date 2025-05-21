@@ -1,0 +1,28 @@
+site_name: Swiss Cat+ CHEMBORD Data Sharing Infrastructure Documentation
+dev_addr: 127.0.0.1:8888
+theme:
+  name: material
+
+markdown_extensions:
+  - pymdownx.snippets:
+      check_paths: true
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+
+plugins:
+  - mkdocs-homepage-copier
+  - mkdocstrings:
+      default_handler: python
+      handlers:
+        python: 
+          paths: [nonexistent_path_on_purpose]
+
+
+nav:
+  - README: index.md
+  - Ontology: ontology.md
+  - Converters: converters.md
+  - User Interface: frontend.md
+
