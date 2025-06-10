@@ -22,7 +22,9 @@ plugins:
 
 nav:
   - README: index.md
-  - Ontology: ontology.md
   - Converters: converters.md
   - User Interface: frontend.md
+  - Ontology: 
+      - Ontology: ontology.md
+      - Ontology Release: ontology-release.md
 
