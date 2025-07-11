@@ -12,7 +12,7 @@ Converters: [catplus-converters](https://github.com/sdsc-ordes/catplus-converter
 
 Front-end (UI) : [catplus-chemboard](https://github.com/sdsc-ordes/catplus-chemboard)
 
-Kubernetes Deployment (private, contact project leads): [catplus-manifests](https://github.com/sdsc-ordes/catplus-manifests) 
+Kubernetes Deployment (private, contact project leads): [catplus-manifests](https://github.com/sdsc-ordes/catplus-manifests)
 (includes argo workflows, qlever RDF database, UI, s3 integration)
 
 ## Development
