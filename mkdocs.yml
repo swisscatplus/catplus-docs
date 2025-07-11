@@ -25,4 +25,6 @@ nav:
   - Ontology: ontology.md
   - Converters: converters.md
   - User Interface: frontend.md
+  - Data Linkage: data-linkage.md
+  - Infrastructure: infrastructure.md
 
