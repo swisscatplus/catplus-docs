@@ -1,0 +1,3 @@
+mkdocs-material==9.6.15
+mkdocstrings[python]
+mkdocs-homepage-copier==1.0.0
