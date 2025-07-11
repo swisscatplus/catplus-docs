@@ -1,4 +1,4 @@
-site_name: Swiss Cat+ CHEMBORD Data Sharing Infrastructure Documentation
+site_name: SwissCAT+ CHEMBORD - Research Data Infrastructure Documentation
 dev_addr: 127.0.0.1:8888
 theme:
   name: material
