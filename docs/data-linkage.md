@@ -7,9 +7,9 @@ sequenceDiagram
     participant Spectro as UV/NMR/IR Files
 
     HCI->>Synth: Execute Batch ID (Parameters used)
-    Synth->>Synth: Generate Product ID
-    Synth->>Agilent: Send Product for analysis
-    Agilent->>Agilent: Generate Peaks
+    Synth->>Synth: Generate Product ID (Synth produces several products)
+    Synth->>Agilent: Send Product for analysis 
+    Agilent->>Agilent: Generate Peaks (Agilent analyses one product)
     Agilent->>Bravo: Transfer Peaks for further processing
     Bravo->>Spectro: Send Peaks for characterization
 
