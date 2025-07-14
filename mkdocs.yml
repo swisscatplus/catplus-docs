@@ -16,7 +16,7 @@ plugins:
   - mkdocstrings:
       default_handler: python
       handlers:
-        python: 
+        python:
           paths: [nonexistent_path_on_purpose]
 
 
@@ -25,4 +25,3 @@ nav:
   - Ontology: ontology.md
   - Converters: converters.md
   - User Interface: frontend.md
-
