@@ -17,15 +17,18 @@ Kubernetes Deployment (private, contact project leads): [catplus-manifests](http
 
 ## Development
 
-### Development environment
+This project uses uv for dependency and environment management.
 
-The project is set-up with a uv virtual environment: `catplus-docs`.
-To create the same environment on your machine:
+```
+git clone git@github.com:sdsc-ordes/catplus-docs.git
+cd catplus-docs
+uv sync
+```
 
-1. Create a uv venv with `uv venv catplus-docs python=3.10.16`
-2. Activate the virtual env, you must do: `source catplus-docs/bin/activate`
-3. Install dependencies with `uv pip install -r requirements.txt`
+Run the docs locally:
 
-### Local Deployment of mkdocs
+```
+uv run mkdocs serve
+```
 
-Local deployment of the docs is with the command `mkdocs serve` and the docs are then visible on [your local port 8888](http://127.0.0.1:8888/).
+The docs are then visible on [your local port 8888](http://127.0.0.1:8888/).
