@@ -11,7 +11,7 @@ The repository contains 3 crates under `src`:
 
 The catplus-common crate is where all the mapping happens, from the raw JSON objects to the RDF terms.
 
-The RDF parsing and serialization for both turtle and jsonld formats happen in the scripts of the `rdf` folder. 
+The RDF parsing and serialization for both turtle and jsonld formats happen in the scripts of the `rdf` module. 
 
 The `models` folder splits the representation of instance data by file type (with list-like concepts such as units under `enums` and overarching terms repeating over file types in `core`). Objects are defined as structs, with each one implementing the trait `InsertIntoGraph`. If a unique URI is required for the object (as for devices, chemicals, products), then the function `get_uri` must be defined within the trait (see existing examples in Agilent and Synth). The [data linkage documentation](data-linkage.md) can help understand how the different models come together.
 
