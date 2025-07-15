@@ -9,7 +9,7 @@ The repository contains 3 crates under `src`:
 * validation: command line helper for SHACL validation of RDF graphs.
 ### Common lib Crate
 
-The common lib is where all the mapping happens, from the raw JSON objects to the RDF terms.
+The catplus-common crate is where all the mapping happens, from the raw JSON objects to the RDF terms.
 
 The RDF parsing and serialization for both turtle and jsonld formats happen in the scripts of the `rdf` folder. 
 
