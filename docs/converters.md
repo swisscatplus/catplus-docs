@@ -40,7 +40,7 @@ just convert /examples/complex_model/Bravo2/ turtle --output-folder=examples/rdf
 ```
 
 `main` defines the CLI processing for the converter. The converter infers automatically from the raw data filename which type of conversion it needs to perform.
-`converter` takes care of instanciating a graph, building the graph by parsing the JSON, and finally linking in the raw data file path if relevant (under `contentURL`).
+`converter` takes care of instantiating a graph, building the graph by parsing the JSON, and finally linking in the raw data file path if relevant (under `contentURL`).
 
 ### Tests
 
