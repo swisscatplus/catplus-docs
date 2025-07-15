@@ -16,7 +16,7 @@ plugins:
   - mkdocstrings:
       default_handler: python
       handlers:
-        python: 
+        python:
           paths: [nonexistent_path_on_purpose]
 
 
