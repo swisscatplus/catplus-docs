@@ -3,11 +3,14 @@
 The Cat+ converter is at this repository [catplus-converters](https://github.com/sdsc-ordes/catplus-converters).
 
 ## Architecture
+
 The repository contains 3 crates under `src`:
+
 * catplus-common: primitives and mappings for the swisscatplus data model.
 * converter: command line interface for the converter.
 * validation: command line helper for SHACL validation of RDF graphs.
-### catplus-commonf
+
+### catplus-common
 
 The catplus-common crate is where all the mapping happens, from the raw JSON objects to the RDF terms.
 
