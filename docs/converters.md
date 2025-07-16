@@ -21,7 +21,13 @@ catplus-common has 3 modules:
 * `rdf`: implements the serialisation of the result graph and currently supports `turtle` and `jsonld`
 
 
-The `models` module splits the representation of instance data by file type (with list-like concepts such as units under `enums` and overarching terms repeating over file types in `core`). Objects are defined as structs, with each one implementing the trait `InsertIntoGraph`. If a unique URI is required for the object (as for devices, chemicals, products), then the function `get_uri` must be defined within the trait (see existing examples in Agilent and Synth). The [data linkage documentation](data-linkage.md) can help understand how the different models come together.
+In `models` the json input data is mapped with `serde-json` to rust structs. The rust structs then construct the rdf graph by each implementing a trait `InsertIntoGraph`. There are several json input files, see  [data linkage documentation](data-linkage.md). Accordingly `models` has several submodules:
+
+* `core`: contains the transformation of structs that are shared between multiple files
+* `enum`: contains the mapping of enumeration types, especially the mapping of action types as most json input files contain actions, that are mapped to different action classes in the ontology.
+* `agilent`, `synth`, `bravo`, `hci`: contain transformations that are specific for the corresponding input data files
+
+If a unique URI is required for the object (as for devices, chemicals, products), then the function `get_uri` must be defined within the trait (see existing examples in Agilent and Synth). The [data linkage documentation](data-linkage.md) can help understand how the different models come together.
 
 The `graph` module contains the `graph::namespaces` child module where each prefix and its terms are defined. The `graph::insert_into` module defines how different types of objects get inserted into the graph to produce valid RDF. The `graph::graph_builder` exposes a Builder interface wrapping the insert_into methods. It is also where the `schema:contentURL` field gets inserted into the graph. The `schema:contentURL` is the path to the raw data json input file. Currently, the raw data is linked to the metadata at the level of the HCI file, onto the Campaign object, as well as at the Agilent level, onto the Liquid Chromatography Document object. New contentURL objects can be defined in the `link_content` function following the existing examples. The raw data file path of the file being parsing will be automatically attached under this concept: hence this concept needs to be unique to the file being parsed for their to be a unique link to the raw data.
 
