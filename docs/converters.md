@@ -52,7 +52,7 @@ just convert /examples/complex_model/Bravo2/ turtle --output-folder=examples/rdf
 
 ### Tests
 
-The command `just test` runs all tests. The raw data used for tests is in `data/tests/` and needs to be updated if changes are made to the raw data. The validating turtle instance data is within the test scripts (in `converter/tests/`) and need to be adapted based on the changes made to the converter.
+The command `just test` runs all tests. The raw data used for tests is in `data/tests/` and needs to be updated if the structure of the input `json` data changes. The validating turtle instance data is within the test scripts (in `converter/tests/`) and need to be adapted based on the changes made to the converter.
 
 ## SHACL Validation
 
