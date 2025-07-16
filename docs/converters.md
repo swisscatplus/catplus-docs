@@ -4,7 +4,7 @@ The Cat+ converter is at this repository [catplus-converters](https://github.com
 
 ## Architecture
 
-The repository contains 3 crates under `src`:
+The repository contains 3 crates:
 
 * catplus-common: primitives and mappings for the swisscatplus data model.
 * converter: command line interface for the converter.
