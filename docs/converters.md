@@ -6,7 +6,7 @@ The Cat+ converter is at this repository [catplus-converters](https://github.com
 
 The repository contains 3 crates:
 
-* catplus-common: primitives and mappings for the swisscatplus data model.
+* catplus-common: mappings from json to rdf into the [catplus-ontology](https://github.com/sdsc-ordes/catplus-ontology)
 * converter: command line interface for the converter.
 * validation: command line helper for SHACL validation of RDF graphs.
 
