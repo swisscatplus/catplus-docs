@@ -14,7 +14,12 @@ The repository contains 3 crates:
 
 The catplus-common crate implements the mapping from the raw JSON objects to the RDF graph.
 
-The RDF parsing and serialization for both turtle and jsonld formats happen in the scripts of the `rdf` module. 
+catplus-common has 3 modules: 
+
+* `graph`: contains namespaces and utilities
+* `models`: implements the transformation from `json` to `rdf` and constructs the rdf graph
+* `rdf`: implements the serialisation of the result graph and currently supports `turtle` and `jsonld`
+
 
 The `models` module splits the representation of instance data by file type (with list-like concepts such as units under `enums` and overarching terms repeating over file types in `core`). Objects are defined as structs, with each one implementing the trait `InsertIntoGraph`. If a unique URI is required for the object (as for devices, chemicals, products), then the function `get_uri` must be defined within the trait (see existing examples in Agilent and Synth). The [data linkage documentation](data-linkage.md) can help understand how the different models come together.
 
