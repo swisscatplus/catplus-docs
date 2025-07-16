@@ -12,7 +12,7 @@ The repository contains 3 crates:
 
 ### catplus-common
 
-The catplus-common crate is where all the mapping happens, from the raw JSON objects to the RDF terms.
+The catplus-common crate implements the mapping from the raw JSON objects to the RDF graph.
 
 The RDF parsing and serialization for both turtle and jsonld formats happen in the scripts of the `rdf` module. 
 
