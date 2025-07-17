@@ -2,7 +2,9 @@
 
 The different components documented here (ontology, converter and front-end), tie into a bigger Research Data Infrastructure. This RDI is deployed on kubernetes and also includes Databases and a Workflow Orchestrator (Argo), which runs the conversion automatically on new raw data and then uploads them to a Graph Database for RDF metadata.
 
-A brief overview of the infrastructure flow is here: 
+Here is a brief overview of the infrastructure flow.
+
+## Backend Data Ingestion
 
 ```mermaid
 sequenceDiagram
@@ -12,20 +14,29 @@ sequenceDiagram
     participant Converter as JSON→RDF Converter
     participant SHACL as SHACL Validator
     participant QLever as QLever RDF DB
-    participant UI as User Interface
-
-    InternalDB->>S3: Export Data & JSON Metdata
+    InternalDB->>S3: Export Data & JSON Metadata
     S3->>Argo: Trigger Weekly Sync
     Argo->>Converter: Transform to RDF (Using Ontology)
     Converter->>SHACL: Validate RDF (Conformance check)
-    SHACL-->>QLever: ✅ Valid → Store Metadata
-    SHACL-->>Argo: ❌ Invalid → Abort Upload
-    QLever->>UI: Serve Metadata (Searchable via SPARQL)
-    User->>UI: Search Metadata for data of interest
-    UI->>User: Display Data + Allow Downloads
+    alt RDF is Valid  
+        SHACL->>QLever: ✅ Store metadata triples
+    else RDF is Invalid 
+        SHACL->>Argo: Report validation failure
+        Argo-->>Argo: ❌ Abort upload
+    end
+```
 
-    Note right of QLever: Metadata stored in RDF triples
-    Note right of SHACL: SHACL ensures structure matches ontology
+## User Search Flow
+
+```mermaid
+sequenceDiagram
+    actor User
+    participant UI as User Interface
+    participant QLever as QLever RDF DB
+    User->>UI: Search for data of interest
+    UI->>QLever: Send SPARQL query
+    QLever->>UI: Return query results (metadata)
+    UI->>User: Display data and provide download links
 ```
 
 For more information, please contact SwissCat+ team or SDSC.
