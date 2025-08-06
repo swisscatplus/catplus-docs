@@ -17,7 +17,7 @@ The frontend uses the following technologies:
 The frontend offers two perspectives on the data of the catplus project:
 
 - `data` route: filtering data in S3
-- `search` route: searching for data with sparql queries via connection to the catplus qlever endpoint, see [catplus-manifests](https://github.com/sdsc-ordes/catplus-manifests)
+- `search` route: searching for data with sparql queries via connection to the [catplus qlever endpoint](https://catplus.swisscustodian.ch/default/)
 
 
 ```mermaid
