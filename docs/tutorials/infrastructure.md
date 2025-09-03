@@ -17,13 +17,15 @@ Step 4: Go over deployment commands
 - SHACL
 - Argo
 
+## Adapt manifests to forked repositories
+
+Based on forked repositories, adapt the paths in manifests.
+
 ## Rerunning workflows (mandatory)
 
-Step 1: Upload some new data to S3 (Agilent with data files)
+Step 1: Port Forward Argo
 
-Step 2: Port Forward Argo
-
-Step 3: Rerun workflows
+Step 2: Rerun workflows
 
 ## Tearing down and building back up (optional)
 

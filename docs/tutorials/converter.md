@@ -1,5 +1,11 @@
 # Tutorial Converter
 
+## Basic setup
+
+Step 1: Install NixOS and direnv
+
+Step 2: Go over just commands
+
 ## Going over components
 
 - catplus-commons
