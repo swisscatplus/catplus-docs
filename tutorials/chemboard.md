@@ -57,7 +57,7 @@ On the `+page.svelte` you have components that are rendered:
 />
 ```
 
-#### Step 2: changing the page code
+#### Step 2: Changing the page code
 
 - `<ResultsHeaderData />` renderes the result header.
 - it corresponds to a compontent that you see imported in the `script` section: `lib/components/ResultsHeaderData.svelte` and it gets as input only the `resultsTotal`.
@@ -71,7 +71,7 @@ So you want to extend this input, whith a title that is derived from the active 
 
 > :small_blue_diamond: provides that additional variable to `<ResultsHeaderData />`.
 
-#### Step 3: changing the component code
+#### Step 3: Changing the component
 
 Now let's look at the component:
 
@@ -97,3 +97,34 @@ It is currently quite small.
 > :small_blue_diamond: add the new variable to the props of the component and inspect it with `$inspect`.
 
 See [Svelte $props](https://svelte.dev/docs/svelte/$props) and [Svelte $inspect](https://svelte.dev/docs/svelte/$inspect)
+
+
+### Exercise 2
+
+
+> :large_blue_diamond: Enhance the result interface of the [Qlever Searchpage](https://sdsc-ordes.github.io/catplus-docs/frontend/search) by displaying the search filters along with the result counts.
+
+#### Step 1: Identifying the page code
+
+> :small_blue_diamond: Similar as above, find the page that you wqnt to change.
+
+#### Step 2: Identifying the component
+
+> :small_blue_diamond: Find the page that you wqnt to change.
+
+The component in this casse already get's a lot more items:
+
+```svelte
+<ResultsHeaderSearch
+	resultsTotal={resultsTotal}
+	initialFilters={initialFilters}
+	resultColumns={resultColumns}
+	query={sparqlQuery}
+/>
+```
+
+#### Step 3: Inspect variables
+
+> :small_blue_diamond: Inspect the variables that the component already has and make use of them for the resultTitle field. Display the resultTitle on the page by adapting the HTML
+
+> :star:  :blush: Congratulations! You have finished this tutorial on the Chemboard.
