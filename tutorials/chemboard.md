@@ -18,15 +18,11 @@ You will get know the code base a bit via the following exercise:
 
 ### Exercise 1
 
-Enhance the result interface for S3 by displayin the search filters along with the result counts.
-
-[S3 Searchpage](https://sdsc-ordes.github.io/catplus-docs/frontend/#data)
+> :large_blue_diamond: Enhance the result interface of the [S3 Searchpage](https://sdsc-ordes.github.io/catplus-docs/frontend/#data) by displaying the search filters along with the result counts.
 
 You can code while the application is running, as it updates automatically
 
 #### Step 1
-
-Find the page, that needs to get updated:
 
 In Svelte there is the `routes` folder: every route is listed by its url: So to change the page [S3 search page](https://catplus.swisscustodian.ch/chembord/data), that has the url: `https://catplus.swisscustodian.ch/chembord/data` you have to go to the data route: `routes/data` in the code base.
 
@@ -67,11 +63,11 @@ On the `+page.svelte` you have components that are rendered:
 So you want to extend this input, whith a title that is derived from the active search filters:
 `year`, `month`, `day`, `mumber`:
 
--  Make another dirived variable for the title:
+> :small_blue_diamond: Make another derived variable for the title:
 
 `const resultTitle = ...`
 
-- provides that additional variable to `<ResultsHeaderData />`.
+> :small_blue_diamond: provides that additional variable to `<ResultsHeaderData />`.
 
 Now let's look at the component:
 
@@ -93,3 +89,7 @@ Now let's look at the component:
 ```
 
 It is currently quite small.
+
+> :small_blue_diamond: add the new variable to the props of the component and inspect it with `$inspect`.
+
+See [Svelte $props](https://svelte.dev/docs/svelte/$props) and [Svelte $inspect](https://svelte.dev/docs/svelte/$inspect)
