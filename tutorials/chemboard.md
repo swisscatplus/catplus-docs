@@ -1,8 +1,8 @@
-# Tutorial Chemboard
+# Tutorial Chembord
 
-## Install the chemboard on your computer
+## Install the Chembord on your computer
 
-Follow the setup instructions on the [Readme](https://github.com/sdsc-ordes/catplus-chembord) or the [documentation](https://sdsc-ordes.github.io/catplus-docs/frontend/#setup): to set up the chemboard for development on your computer. You will need to fill in your S3 credentials additionally to the provided environment variables
+Follow the setup instructions on the [Readme](https://github.com/sdsc-ordes/catplus-chembord) or the [documentation](https://sdsc-ordes.github.io/catplus-docs/frontend/#setup): to set up the Chembord for development on your computer. You will need to fill in your S3 credentials additionally to the provided environment variables
 
 ## Run the application locally
 
@@ -10,7 +10,7 @@ With `just local` the application should now be starting.
 
 ## Technology used
 
-The Chemboard uses [Sveltekit](https://svelte.dev/), which has an excellent free [tutorial](https://svelte.dev/tutorial/svelte/welcome-to-svelte), in case you want to familiarize yourself with this technology. Also consider exploring the [docs](https://svelte.dev/docs), whenever you struggle understanding some concept, mentioned in the tutorial.
+The Chembord uses [Sveltekit](https://svelte.dev/), which has an excellent free [tutorial](https://svelte.dev/tutorial/svelte/welcome-to-svelte), in case you want to familiarize yourself with this technology. Also consider exploring the [docs](https://svelte.dev/docs), whenever you struggle understanding some concept, mentioned in the tutorial.
 
 ## Exercises
 
@@ -127,4 +127,4 @@ The component in this casse already get's a lot more items:
 
 > :small_blue_diamond: Inspect the variables that the component already has and make use of them for the resultTitle field. Display the resultTitle on the page by adapting the HTML
 
-> :star:  :blush: Congratulations! You have finished this tutorial on the Chemboard.
+> :star:  :blush: Congratulations! You have finished this tutorial on the Chembord.
