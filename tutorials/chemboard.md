@@ -22,7 +22,7 @@ You will get know the code base a bit via the following exercise:
 
 You can code while the application is running, as it updates automatically
 
-#### Step 1
+#### Step 1: Identifying the page code
 
 In Svelte there is the `routes` folder: every route is listed by its url: So to change the page [S3 search page](https://catplus.swisscustodian.ch/chembord/data), that has the url: `https://catplus.swisscustodian.ch/chembord/data` you have to go to the data route: `routes/data` in the code base.
 
@@ -57,6 +57,8 @@ On the `+page.svelte` you have components that are rendered:
 />
 ```
 
+#### Step 2: changing the page code
+
 - `<ResultsHeaderData />` renderes the result header.
 - it corresponds to a compontent that you see imported in the `script` section: `lib/components/ResultsHeaderData.svelte` and it gets as input only the `resultsTotal`.
 
@@ -68,6 +70,8 @@ So you want to extend this input, whith a title that is derived from the active 
 `const resultTitle = ...`
 
 > :small_blue_diamond: provides that additional variable to `<ResultsHeaderData />`.
+
+#### Step 3: changing the component code
 
 Now let's look at the component:
 
