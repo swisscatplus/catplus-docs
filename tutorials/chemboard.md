@@ -35,4 +35,61 @@ There you will find two code files:
 - `+page.server.ts`: loading data and performing form actions on the server
 - `+page.svelte`: rendering the page in the browser
 
-See Docs
+On the `+page.svelte` you have components that are rendered:
+
+`.svelte` usually come the following parts: [Svelte Tutorial: your first component](https://svelte.dev/tutorial/svelte/your-first-component)
+
+- `script`: importing functions, loading data, defining variables (also dynamic variables as `derived` and state variables as `state`)
+- `html`: where variables from the script section are used
+- `styles`: custom styles for just this file if needed
+
+```svelte
+<script lang="ts">
+	import { page } from '$app/state';
+    import ResultsHeaderData from '$lib/components/ResultsHeaderData.svelte';
+
+    let year = $derived(page.url.searchParams.get('year') || undefined);
+	let month = $derived(page.url.searchParams.get('month') || undefined);
+	let day = $derived(page.url.searchParams.get('day') || undefined);
+	let number = $derived(page.url.searchParams.get('number') || undefined);
+
+    const resultsTotal: number = $derived(data.resultTotal);
+</script>
+
+<ResultsHeaderData
+    resultsTotal={resultsTotal}
+/>
+```
+
+- `<ResultsHeaderData />` renderes the result header.
+- it corresponds to a compontent that you see imported in the `script` section: `lib/components/ResultsHeaderData.svelte` and it gets as input only the `resultsTotal`.
+
+So you want to extend this input, whith a title that is derived from the active search filters:
+`year`, `month`, `day`, `mumber`:
+
+-  Make another dirived variable for the title:
+
+`const resultTitle = ...`
+
+- provides that additional variable to `<ResultsHeaderData />`.
+
+Now let's look at the component:
+
+```svelte
+<script lang="ts">
+	let {
+		resultsTotal,
+	} = $props();
+</script>
+
+<h1 class="mb-4 p-4 text-xl font-bold text-surface-800-200">
+    Results ({resultsTotal})
+</h1>
+{#if !resultsTotal}
+	<p>
+		No results have been found.
+	</p>
+{/if}
+```
+
+It is currently quite small.
