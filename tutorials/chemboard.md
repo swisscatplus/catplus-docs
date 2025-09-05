@@ -102,7 +102,7 @@ See [Svelte $props](https://svelte.dev/docs/svelte/$props) and [Svelte $inspect]
 ### Exercise 2
 
 
-> :large_blue_diamond: Enhance the result interface of the [Qlever Searchpage](https://sdsc-ordes.github.io/catplus-docs/frontend/search) by displaying the search filters along with the result counts.
+> :large_blue_diamond: Enhance the result interface of the [Qlever Searchpage](https://sdsc-ordes.github.io/catplus-docs/frontend/#search) by displaying the search filters along with the result counts.
 
 #### Step 1: Identifying the page code
 
