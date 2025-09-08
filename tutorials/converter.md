@@ -21,7 +21,7 @@ For the crates created by the project, please read `docs/converters.md`, `Archit
 
 Step 2: `Just` commands
 
-For all commands, you will want to be in the Nix shell, to have a reproducible environment with dependencies preconfigured: run `just dev`.
+For all commands, you will want to be in the Nix shell (you might need to grant that by accepting direnv allow), to have a reproducible environment with dependencies preconfigured: run `just dev`.
 
 All conversion commands are available in the `README`. We encourage you to try them out. For checking the output of the conversion, please see the `SHACL Validation` section in `docs/converters.md` to see how to send the output RDF to a SHACL validator.
 
