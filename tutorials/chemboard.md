@@ -131,12 +131,12 @@ The component in this casse already get's a lot more items:
 
 ## Deployment
 
-In order to deploy the Chembord see at [catplus-deployment](https://github.com/swisscatplus/catplus-deployment).
+In order to deploy the chembord see instructions at [catplus-deployment](https://github.com/swisscatplus/catplus-deployment).
 The deployment expects that there is an image available at [chembord packages](https://github.com/swisscatplus/catplus-chembord/pkgs/container/catplus-chembord).
 
 ### Prerequisites
 
-- `podman`: images are build with podman: you need to install podman and run the podman server, see here: [podman-start](https://docs.podman.io/en/stable/markdown/podman-start.1.html)
+- `podman`: images are currently build with podman: you need to install podman and run the podman server, see here: [podman-start](https://docs.podman.io/en/stable/markdown/podman-start.1.html) or change the `just` commands to build with docker.
 
 ### Build image
 
