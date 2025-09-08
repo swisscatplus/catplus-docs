@@ -1,0 +1,626 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../ontology/">
+      
+      
+        <link rel="next" href="../frontend/">
+      
+      
+      <link rel="icon" href="../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.15">
+    
+    
+      
+        <title>Converters - SwissCAT+ CHEMBORD - Research Data Infrastructure Documentation</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.342714a4.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/_mkdocstrings.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    <body dir="ltr">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#converter" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="SwissCAT+ CHEMBORD - Research Data Infrastructure Documentation" class="md-header__button md-logo" aria-label="SwissCAT+ CHEMBORD - Research Data Infrastructure Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            SwissCAT+ CHEMBORD - Research Data Infrastructure Documentation
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Converters
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
+    
+    
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="SwissCAT+ CHEMBORD - Research Data Infrastructure Documentation" class="md-nav__button md-logo" aria-label="SwissCAT+ CHEMBORD - Research Data Infrastructure Documentation" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    SwissCAT+ CHEMBORD - Research Data Infrastructure Documentation
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    README
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../ontology/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Ontology
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Converters
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Converters
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#catplus-common" class="md-nav__link">
+    <span class="md-ellipsis">
+      catplus-common
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converter-crate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converter Crate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shacl-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHACL Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-and-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary and Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribution guidelines
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../frontend/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    User Interface
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../data-linkage/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Data Linkage
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../infrastructure/" class="md-nav__link">
+        
+  
+  
+  <span class="md-ellipsis">
+    Infrastructure
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#architecture" class="md-nav__link">
+    <span class="md-ellipsis">
+      Architecture
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Architecture">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#catplus-common" class="md-nav__link">
+    <span class="md-ellipsis">
+      catplus-common
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#converter-crate" class="md-nav__link">
+    <span class="md-ellipsis">
+      Converter Crate
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#tests" class="md-nav__link">
+    <span class="md-ellipsis">
+      Tests
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#shacl-validation" class="md-nav__link">
+    <span class="md-ellipsis">
+      SHACL Validation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#binary-and-image" class="md-nav__link">
+    <span class="md-ellipsis">
+      Binary and Image
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribution-guidelines" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribution guidelines
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="converter">Converter</h1>
+<p>The Cat+ converter is at this repository <a href="https://github.com/sdsc-ordes/catplus-converters">catplus-converters</a>.</p>
+<h2 id="architecture">Architecture</h2>
+<p>The repository contains 3 crates:</p>
+<ul>
+<li>catplus-common: mappings from json to rdf into the <a href="https://github.com/sdsc-ordes/catplus-ontology">catplus-ontology</a></li>
+<li>converter: command line interface for the converter.</li>
+<li>validation: command line helper for SHACL validation of RDF graphs.</li>
+</ul>
+<h3 id="catplus-common">catplus-common</h3>
+<p>The catplus-common crate implements the mapping from the raw JSON objects to the RDF graph.</p>
+<p>catplus-common has 3 modules: </p>
+<ul>
+<li><code>graph</code>: contains namespaces and utilities</li>
+<li><code>models</code>: implements the transformation from <code>json</code> to <code>rdf</code> and constructs the rdf graph</li>
+<li><code>rdf</code>: implements the serialisation of the result graph and currently supports <code>turtle</code> and <code>jsonld</code></li>
+</ul>
+<p>In <code>models</code> the json input data is mapped with <code>serde-json</code> to rust structs. The rust structs then construct the rdf graph by each implementing a trait <code>InsertIntoGraph</code>. There are several json input files, see  <a href="../data-linkage/">data linkage documentation</a>. Accordingly <code>models</code> has several submodules:</p>
+<ul>
+<li><code>core</code>: contains the transformation of structs that are shared between multiple files</li>
+<li><code>enum</code>: contains the mapping of enumeration types, especially the mapping of action types as most json input files contain actions, that are mapped to different action classes in the ontology.</li>
+<li><code>agilent</code>, <code>synth</code>, <code>bravo</code>, <code>hci</code>: contain transformations that are specific for the corresponding input data files</li>
+</ul>
+<p>If a unique URI is required for the object (as for devices, chemicals, products), then the function <code>get_uri</code> must be defined within the trait (see existing examples in Agilent and Synth). The <a href="../data-linkage/">data linkage documentation</a> can help understand how the different models come together.</p>
+<p>The <code>graph</code> module contains the <code>graph::namespaces</code> child module where each prefix and its terms are defined. The <code>graph::insert_into</code> module defines how different types of objects get inserted into the graph to produce valid RDF. The <code>graph::graph_builder</code> exposes a Builder interface wrapping the insert_into methods. It is also where the <code>schema:contentURL</code> field gets inserted into the graph. The <code>schema:contentURL</code> is the path to the raw data json input file. Currently, the raw data is linked to the metadata at the level of the HCI file, onto the Campaign object, as well as at the Agilent level, onto the Liquid Chromatography Document object. New contentURL objects can be defined in the <code>link_content</code> function following the existing examples. The raw data file path of the file being parsing will be automatically attached under this concept: hence this concept needs to be unique to the file being parsed for their to be a unique link to the raw data.</p>
+<h3 id="converter-crate">Converter Crate</h3>
+<p>The converter can process file one by one or an entire folder.</p>
+<p>Example for a file:</p>
+<div class="highlight"><pre><span></span><code>just convert /examples/2-Agilent.json turtle
+</code></pre></div>
+<p>Example for a folder (multifiles):</p>
+<div class="highlight"><pre><span></span><code>just convert /examples/complex_model/Bravo2/ turtle
+</code></pre></div>
+<p>Example for a folder (multifiles) where the output folder is specified:</p>
+<div class="highlight"><pre><span></span><code>just convert /examples/complex_model/Bravo2/ turtle --output-folder=examples/rdf
+</code></pre></div>
+<p><code>main</code> defines the CLI processing for the converter. The converter infers automatically from the raw data filename which type of conversion it needs to perform.
+<code>converter</code> takes care of instantiating a graph, building the graph by parsing the JSON, and finally linking in the raw data file path if relevant (under <code>contentURL</code>).</p>
+<h3 id="tests">Tests</h3>
+<p>The command <code>just test</code> runs all tests. The raw data used for tests is in <code>data/tests/</code> and needs to be updated if the structure of the input <code>json</code> data changes. The validating turtle instance data is within the test scripts (in <code>converter/tests/</code>) and need to be adapted based on the changes made to the converter.</p>
+<h2 id="shacl-validation">SHACL Validation</h2>
+<p>The instance data produced by the converter follow the definitions in the <a href="https://github.com/sdsc-ordes/catplus-ontology">SwissCAT+ ontology</a>. SHACL validation can be done with the following commands: </p>
+<ol>
+<li>Activate the Nix shell: <code>just dev</code></li>
+<li>Start a local shacl validator docker image based on the <a href="ghcr.io/sdsc-ordes/shacl-api:develop">SHACL-API service</a> (the ontology shapes are loaded by default): <code>just shacl-start</code></li>
+<li>Ping the SHACL-API service to know if the instance data in RDF is valid with the ontology: <code>just validate YOUR_TURTLE_FILE</code></li>
+<li>Turn off the SHACL-API image: <code>just shacl-stop</code></li>
+</ol>
+<h2 id="binary-and-image">Binary and Image</h2>
+<p>A binary and image (docker) is created via Nix derivatives (code is in <code>tools/image</code> with commands in <code>tools/just/image.just</code>, same for the package).</p>
+<div class="highlight"><pre><span></span><code>just dev
+just image build
+just image push
+</code></pre></div>
+<p>The <a href="https://github.com/orgs/sdsc-ordes/packages/container/package/catplus-converters">resulting images can be found here</a>.
+The image is extremely minimal and contains only the converter.</p>
+<h2 id="contribution-guidelines">Contribution guidelines</h2>
+<ol>
+<li>Open an issue for the change you would like to make</li>
+<li>Make a new branch for the change. Use conventional commit nomenclature.</li>
+<li>Ensure tests are still functional with <code>just test</code></li>
+<li>Ensure SHACL is still valid (see SHACL Validation section)</li>
+<li>Ensure code is formatted with <code>just format</code></li>
+<li>Open a PR for your changes and asign a reviewer.</li>
+</ol>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": "..", "features": [], "search": "../assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.56ea9cef.min.js"></script>
+      
+    
+  </body>
+</html>
