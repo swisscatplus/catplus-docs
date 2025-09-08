@@ -2,7 +2,7 @@
 
 ## Prerequisites
 
-- Install just: https://github.com/casey/just
+- Install just: https://github.com/casey/just: just is a command runner
 - Install Nix: https://nixos.org/download/: Nix is a tool for package management that uses declarative language to provide reproducible systems
 - Install Direnv: https://direnv.net/docs/installation.html: direnv is an open source environment management tool that allows setting unique environment variables per directory in your file system
 
