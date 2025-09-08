@@ -3,14 +3,16 @@
 ## Prerequisites
 
 - Install just: https://github.com/casey/just: just is a command runner
-- Install Nix: https://nixos.org/download/: Nix is a tool for package management that uses declarative language to provide reproducible systems
+- Install Nix: https://docs.determinate.systems/: Nix is a tool for package management that uses declarative language to provide reproducible systems
 - Install Direnv: https://direnv.net/docs/installation.html: direnv is an open source environment management tool that allows setting unique environment variables per directory in your file system
 
 ## Basic setup
 
-Step 1: Install Rust
+Step 1: Intro to Rust
 
-The converter is coded in Rust. Installing Rust (and it's toolstack like cargo, the package manager): https://www.rust-lang.org/tools/install
+Note: everything you need will be set-up by the nix dev shell. More on how to use it in the next step.
+
+The converter is coded in Rust. More information on Rust (and it's toolstack like cargo, the package manager): https://www.rust-lang.org
 
 The main packages used in the converter are (this is for your information, they are already in the dependencies in the Cargo.toml):
 
