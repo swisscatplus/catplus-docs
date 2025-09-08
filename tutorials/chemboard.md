@@ -136,7 +136,7 @@ The deployment expects that there is an image available at [chembord packages](h
 
 ### Prerequisites
 
-- `podman`: images are currently build with podman: you need to install podman and run the podman server, see here: [podman-start](https://docs.podman.io/en/stable/markdown/podman-start.1.html) or change the `just` commands to build with docker.
+- `podman`: images are currently build with podman: you need to install podman and run the podman server, see here: [podman-start](https://docs.podman.io/en/stable/markdown/podman-start.1.html).
 
 ### Build image
 
