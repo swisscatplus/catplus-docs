@@ -15,7 +15,7 @@ The converter is coded in Rust. Installing Rust (and it's toolstack like cargo, 
 The main packages used in the converter are (this is for your information, they are already in the dependencies in the Cargo.toml):
 
 - `serde_json` for serializing the JSON files: https://crates.io/crates/serde_json
-- sophia (and annex packages) for RDF manipulation: https://crates.io/crates/sophia
+- `sophia` (and annex packages) for RDF manipulation: https://crates.io/crates/sophia
 
 For the crates created by the project, please read `docs/converters.md`, `Architecture` section.
 
