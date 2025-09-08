@@ -140,7 +140,7 @@ The deployment expects that there is an image available at [chembord packages](h
 
 ### Build image
 
-- build image: `just build`
+- build image: `just image build`
 
 ### Update image on github
 
