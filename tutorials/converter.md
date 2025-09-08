@@ -48,7 +48,7 @@ pub struct DeviceDocument {
 }
 ```
 
-The rename fields match the name of the key in the JSON files. The struct allows to parse the JSON into Rust objects. To every struct, we couple an InsertIntoGraph function, which does just that.
+The rename fields match the name of the key in the JSON files. The struct allows to parse the JSON into Rust objects. To every struct, we couple an InsertIntoGraph function, which then parses the Rust struct into triples that are added to the rdf graph.
 
 ```rust
 impl InsertIntoGraph for DeviceDocument {
