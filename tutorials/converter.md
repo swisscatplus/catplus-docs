@@ -35,7 +35,7 @@ All conversion commands are available in the `README`. We encourage you to try t
 
 ### HCI / Synth / Agilent or Bravo change
 
-The mapping from JSON to RDF is specified in `catplus-common/src/models/` where common entities (chemicals, peaks, products) are defined in `core`, but all other entities specific to each data type are in their respective file `hic`, `synth`, `agilent`, `bravo`.
+The mapping from JSON to RDF is specified in `catplus-common/src/models/` where common entities (chemicals, peaks, products) are defined in `core`, but all other entities specific to each data type are in their respective file `hci`, `synth`, `agilent`, `bravo` under `models`.
 
 Let's look at how this mapping works. For Agilent, there is a Device Document structure created (shortened version of the struct presented here): 
 
