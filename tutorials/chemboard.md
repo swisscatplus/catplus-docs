@@ -128,3 +128,23 @@ The component in this casse already get's a lot more items:
 > :small_blue_diamond: Inspect the variables that the component already has and make use of them for the resultTitle field. Display the resultTitle on the page by adapting the HTML
 
 > :star:  :blush: Congratulations! You have finished this tutorial on the Chembord.
+
+## Deployment
+
+In order to deploy the chembord see instructions at [catplus-deployment](https://github.com/swisscatplus/catplus-deployment).
+The deployment expects that there is an image available at [chembord packages](https://github.com/swisscatplus/catplus-chembord/pkgs/container/catplus-chembord).
+
+### Prerequisites
+
+- `podman`: images are currently build with podman: you need to install podman and run the podman server, see here: [podman-start](https://docs.podman.io/en/stable/markdown/podman-start.1.html).
+
+### Build image
+
+- build image: `just image build`
+
+### Update image on github
+
+The image is pushed automatically when the an update on the `main` branch happens by the github action:
+
+- first time: login into github with podman: `podman login ghcr.io`
+- once logged in you can push the image that has been build, for example: `podman push ghcr.io/swisscatplus/catplus-chembord:latest`.
